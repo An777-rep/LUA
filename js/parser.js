@@ -20,3 +20,11 @@ function clearAll() {
     document.getElementById("input").value = "";
     document.getElementById("output").value = "";
 }
+
+async function handleParse() {
+    const input = document.getElementById("input").value;
+    const result = await parseComplexCommand(input);
+    const outputEl = document.getElementById("output");
+    outputEl.value = result;
+    outputEl.scrollIntoView({ behavior: "smooth" });
+}
