@@ -3,17 +3,20 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>GG Lua Конструктор (умный оффлайн)</title>
-  <script src="js/parser.js"></script>
+  <title>Lua GG Smart Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
   <script src="js/gg-functions.js"></script>
   <script src="js/fuzzy.js"></script>
   <script src="js/context.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <script src="js/parser.js"></script>
+  <script src="js/templates.js"></script>
 </head>
-<body>
+<body onload="loadTemplates()">
   <h1>Lua GG Smart Builder</h1>
-  <input id="input" placeholder="Введи команду..." />
+  <textarea id="input" placeholder="Введи команду на русском..." oninput="parseInput()"></textarea>
   <button onclick="parseInput()">Обработать</button>
-  <pre id="output"></pre>
+  <button onclick="downloadLua()">📥 Скачать Lua</button><button onclick="clearAll()">🗑 Очистить</button>
+  <textarea id="output" placeholder="Здесь появится Lua скрипт..." readonly></textarea>
 </body>
 </html>

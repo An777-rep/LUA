@@ -1,4 +1,35 @@
 
-body { background: #121212; color: #fff; font-family: sans-serif; padding: 20px; }
-input, button { padding: 10px; margin: 10px 0; width: 100%; border-radius: 5px; }
-button { background: #00bcd4; color: black; cursor: pointer; }
+body {
+  background: #121212;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+textarea, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  resize: vertical;
+  font-family: monospace;
+}
+button {
+  background-color: #00bcd4;
+  color: black;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #00acc1;
+}
